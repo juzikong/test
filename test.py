@@ -8,6 +8,7 @@ import numpy as np
 import time
 from scipy.integrate import quad
 import importlib
+import matplotlib.pyplot as plt
 
 a = math.log(100, 10)
 
