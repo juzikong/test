@@ -12,8 +12,8 @@ import time
 import math
 import importlib
 from scipy.integrate import quad
-import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
+# import matplotlib.pyplot as plt
+# from matplotlib.font_manager import FontProperties
 import gc
 import sys
 import warnings
@@ -5401,7 +5401,7 @@ def plot_output(plot_show, plot_save, imf, igimf, SFR, SFEN, log_Z_0, STF):  # S
         #     if plot_save is True:
         #         plt.savefig('Ne_production.pdf', dpi=250)
 
-    if True: # plot_show is True:
+    if plot_show is True:
         plt.show()
     return
 
