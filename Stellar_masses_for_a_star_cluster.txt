@@ -1,0 +1,13 @@
+# Output file of the generated stellar masses for a star cluster with given mass and metallicity.
+# The columns are:
+# Mass in solar mass unit; Number of stars in this star cluster have mass close to this value
+
+0.17323560273135258 1
+0.15596600024523735 2
+0.14211912020109818 3
+0.13080415837942894 5
+0.12032687133847629 9
+0.10995940718776677 18
+0.09967924017265303 37
+0.08945738938416017 84
+0.08287368495555053 80
