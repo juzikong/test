@@ -7,5 +7,5 @@ print(a)
 print("...text output OK...")
 
 file = open('testoutputfile.txt', 'w')
-file.write("test\n{}".formate(a))
+file.write("test\n")
 file.close()
