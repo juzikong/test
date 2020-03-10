@@ -97,20 +97,20 @@ def a_pipeline_pair(parameters):
 if __name__ == '__main__':
     start = time()
 
-    # SFEN = 5  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
-    # SFH_shape = 'flat'
-    # location = 0
-    # skewness = 10
-    # sfr_tail = 0
-    # imf = 'igimf'
-    # STF_list = [0.1, 0.3, 0.6, 1.0]
-    # Log_SFR_list = [-2.0, 0.0, 2.0, 4.0]
-    # for Log_SFR in Log_SFR_list:
-    #     galevo.generate_SFH(SFH_shape, Log_SFR, SFEN, sfr_tail, skewness, location)
-    #     # simulate for different star transformation fraction
-    #     pool = mp.Pool(mp.cpu_count())
-    #     pool.map(a_pipeline, [STF for STF in STF_list])
-    #     pool.close()
+    SFEN = 5  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
+    SFH_shape = 'flat'
+    location = 0
+    skewness = 10
+    sfr_tail = 0
+    imf = 'igimf'
+    STF_list = [0.1, 0.3]
+    Log_SFR_list = [-2.0]
+    for Log_SFR in Log_SFR_list:
+        galevo.generate_SFH(SFH_shape, Log_SFR, SFEN, sfr_tail, skewness, location)
+        # simulate for different star transformation fraction
+        pool = mp.Pool(mp.cpu_count())
+        pool.map(a_pipeline, [STF for STF in STF_list])
+        pool.close()
     #
     # SFEN = 10  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
     # SFH_shape = 'flat'
@@ -171,21 +171,21 @@ if __name__ == '__main__':
     #     pool = mp.Pool(mp.cpu_count())
     #     pool.map(a_pipeline, [STF for STF in STF_list])
     #     pool.close()
-    #
-    SFEN = 200  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
-    SFH_shape = 'flat'
-    location = 0
-    skewness = 10
-    sfr_tail = 0
-    imf = 'igimf'
-    STF_list = [0.1, 0.3, 0.6, 1.0]
-    Log_SFR_list = [-2.0, 0.0, 2.0, 4.0]
-    for Log_SFR in Log_SFR_list:
-        galevo.generate_SFH(SFH_shape, Log_SFR, SFEN, sfr_tail, skewness, location)
-        # simulate for different star transformation fraction
-        pool = mp.Pool(mp.cpu_count())
-        pool.map(a_pipeline, [STF for STF in STF_list])
-        pool.close()
+    # #
+    # SFEN = 200  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
+    # SFH_shape = 'flat'
+    # location = 0
+    # skewness = 10
+    # sfr_tail = 0
+    # imf = 'igimf'
+    # STF_list = [0.1, 0.3, 0.6, 1.0]
+    # Log_SFR_list = [-2.0, 0.0, 2.0, 4.0]
+    # for Log_SFR in Log_SFR_list:
+    #     galevo.generate_SFH(SFH_shape, Log_SFR, SFEN, sfr_tail, skewness, location)
+    #     # simulate for different star transformation fraction
+    #     pool = mp.Pool(mp.cpu_count())
+    #     pool.map(a_pipeline, [STF for STF in STF_list])
+    #     pool.close()
     #
     # SFEN = 400  # Parallelizing only work for the same SFEN since SFH.txt file is the same!
     # SFH_shape = 'flat'
