@@ -17,5 +17,5 @@ print(a)
 print("...text output OK...")
 
 file = open('testoutputfile.txt', 'w')
-file.write("out put file generated. \n\n===\n\n")
+file.write("out put file generated. \n\n===\n\n".formate(a))
 file.close()
